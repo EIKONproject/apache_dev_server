@@ -1,5 +1,6 @@
 FROM php:7.4-apache
 LABEL org.opencontainers.image.authors="davide.lanza@eikonproject.org"
+LABEL org.opencontainers.image.description "Apache on PHP 7.4 Development Docker Image"
 
 ARG WEBSITE_NAME=localwebsite.com
 ENV WEBSITE_NAME=${WEBSITE_NAME}

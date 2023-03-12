@@ -2,13 +2,12 @@ version: '3.8'
 
 services:
   test-apache-server:
+    # image: "ghcr.io/eikonproject/apache_dev_server:main"
     build:
       dockerfile: ./Dockerfile
       args:
         WEBSITE_NAME: test-website.org
     volumes:
       - ./test-website.org/htdocs:/home/htdocs
-    extra_hosts:
-      - test-website.org:127.0.0.1
     ports:
       - 8901:80
