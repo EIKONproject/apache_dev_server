@@ -1,6 +1,7 @@
 name: Docker retention policy
 
 on:
+  workflow_dispatch:
   schedule:
      - cron: '16 12 * * *'
   push:
