@@ -21,10 +21,11 @@ jobs:
       id-token: write
 
     steps:
+      # https://github.com/actions/delete-package-versions
       - name: Delete all untagged container versions except 5 latest untagged versions
         uses: actions/delete-package-versions@v4
         with:
-          package-name: ghcr.io/eikonproject/apache_dev_server
+          package-name: 'apache_dev_server' # 'ghcr.io/eikonproject/apache_dev_server'
           package-type: 'container'
           min-versions-to-keep: 5
           delete-only-untagged-versions: 'true'
