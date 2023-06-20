@@ -9,13 +9,6 @@ on:
   pull_request:
     branches: [ "main" ]
 
-env:
-  # Use docker.io for Docker Hub if empty
-  REGISTRY: ghcr.io
-  # github.repository as <account>/<repo>
-  IMAGE_NAME: ${{ github.repository }}
-
-
 jobs:
   build:
 
@@ -31,7 +24,7 @@ jobs:
       - name: Delete all untagged container versions except 5 latest untagged versions
         uses: actions/delete-package-versions@v4
         with:
-          package-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          package-name: ghcr.io/eikonproject/apache_dev_server
           package-type: 'container'
           min-versions-to-keep: 5
           delete-only-untagged-versions: 'true'
