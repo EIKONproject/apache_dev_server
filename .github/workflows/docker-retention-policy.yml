@@ -31,7 +31,7 @@ jobs:
       - name: Delete all untagged container versions except 5 latest untagged versions
         uses: actions/delete-package-versions@v4
         with:
-          package-name: ${{ env.IMAGE_NAME }}
+          package-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           package-type: 'container'
           min-versions-to-keep: 5
           delete-only-untagged-versions: 'true'
