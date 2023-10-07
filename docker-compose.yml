@@ -5,9 +5,7 @@ services:
     # image: "ghcr.io/eikonproject/apache_dev_server:main"
     build:
       dockerfile: ./Dockerfile
-      args:
-        WEBSITE_NAME: test-website.org
     volumes:
-      - ./test-website.org/htdocs:/home/htdocs
+      - ./test-website/htdocs:/home/htdocs
     ports:
       - 8901:80
