@@ -1,4 +1,4 @@
-<h1> Apache on PHP 7.4 Development Docker Image</h1>
+<h1> Apache on PHP Development Docker Image</h1>
 
 ## How to use
 
@@ -13,7 +13,7 @@ services:
     volumes:
       - <WEBSITE_HTDOCS_FOLDER>:/home/htdocs
     ports:
-      - <DESIRED_PORT>:80
+      - <DESIRED_PORT>:8889
 ```
 
 ## Build locally
